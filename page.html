@@ -12,7 +12,8 @@
 };
 function proc()
 {
-	var getData= window.localStorage.getItem('alpha') + ";" + window.localStorage.getItem('beta') + ";" + window.localStorage.getItem('gamma') + ";";
+	window.localStorage.setItem("alpha", "lol");
+	var getData= window.localStorage.getItem("alpha") + ";" + window.localStorage.getItem("beta") + ";" + window.localStorage.getItem("gamma");
 	document.getElementById("gyro").innerHTML=getData;
 	proc();
 	//document.getElementById("beta").innerHTML=beta;
