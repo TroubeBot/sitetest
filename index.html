@@ -27,18 +27,11 @@ function processGyro(alpha,beta,gamma)
 	document.getElementById("beta").innerHTML=beta;
 	document.getElementById("gamma").innerHTML =gamma;
 	const fs = require('fs') 
+	window.localStorage.setItem("alpha",alpha);
+	window.localStorage.setItem("beta",beta);
+	window.localStorage.setItem("gamma",gamma);
 
-	// Data which will write in a file. 
-	let data = "Learning how to write in a file."
-
-	// Write data in 'Output.txt' . 
-	fs.writeFile('test.txt', data, (err) => { 
-
-	    // In case of a error throw err. 
-	    if (err) throw err; 
-	}) 
-	var sttrr = "";
-	document.getElementById("sttrr") = sttrr;
+	
 	
 }
 </script>
