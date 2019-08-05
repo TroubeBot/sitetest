@@ -26,13 +26,18 @@ function processGyro(alpha,beta,gamma)
 	document.getElementById("alpha").innerHTML=alpha;
 	document.getElementById("beta").innerHTML=beta;
 	document.getElementById("gamma").innerHTML =gamma;
+	const fs = require('fs') 
+
+	// Data which will write in a file. 
+	let data = "Learning how to write in a file."
+
+	// Write data in 'Output.txt' . 
+	fs.writeFile('test.txt', data, (err) => { 
+
+	    // In case of a error throw err. 
+	    if (err) throw err; 
+	}) 
 	var sttrr = "";
-	var XHR = new XMLHttpRequest();
-	XHR.open("GET", "text.txt", true);
-	XHR.send();
-	XHR.onload = function (){
-	    sttrr = XHR.responseText.slice(0, XHR.responseText.indexOf("\n"));
-	};
 	document.getElementById("sttrr") = sttrr;
 	
 }
