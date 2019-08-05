@@ -5,14 +5,16 @@
     <title>test</title>
   </head>
   <body>
-    alpha:<span id="alpha"></span><br>
-    beta:<span id="beta"></span><br>
-    gamma:<span id="gamma"></span><br>
-    sttrr:<span id="sttrr"></span><br>
+    <span id="gyro"></span><br>
     <script>
-function processGyro(alpha,beta,gamma)
+	    window.onload = function() {
+  proc();
+};
+function proc()
 {
-	//document.getElementById("alpha").innerHTML=alpha;
+	var getData= window.localStorage.getItem("alpha") + ";" + window.localStorage.getItem("beta") + ";" + window.localStorage.getItem("gamma");
+	document.getElementById("gyro").innerHTML=getData;
+	proc();
 	//document.getElementById("beta").innerHTML=beta;
 	//document.getElementById("gamma").innerHTML =gamma;
 	//const fs = require('fs') 
